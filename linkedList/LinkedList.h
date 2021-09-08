@@ -1,7 +1,7 @@
 /**
 *	@file LinkedList.h
-*	@author 
-*	@date 
+*	@author Edina Harsay (edited version)
+*	@date September 7, 2021
 *	@brief A header file for templated LinkedList class
 */
 
