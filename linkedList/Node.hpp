@@ -4,6 +4,8 @@
 *	@file Node.hpp
 */
 
+#include "Node.h"
+
 template <typename T>
 Node<T>::Node(T value) : m_value(value), m_next(nullptr)
 {
