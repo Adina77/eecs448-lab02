@@ -49,7 +49,7 @@ bool LinkedList<T>::search(T value) const
 			{
 				isFound = true;
 			}
-			temp = temp->getNext;
+			temp = temp->getNext();
 			count ++;
 		}
 	}
@@ -110,11 +110,22 @@ bool LinkedList<T>::removeBack()
 {
 	Node<T>* lastNode = nullptr;
 	Node<T>* secondintoLast = nullptr;
+	Node<T>* jumper = m_front;
 	bool isRemoved = false;
 
-	/** TODO 
-		Fix this method
-	*/
+	if(!isEmpty())
+	{
+		while (jumper->getNext() != nullptr)
+		{
+			secondintoLast = jumper;
+			jumper = jumper->getNext();
+		}
+		lastNode = jumper;
+		secondintoLast->setNext(nullptr);
+		delete lastNode;
+		m_size --;
+		isRemoved = true;
+	}
 
 	return(isRemoved);
 }	
