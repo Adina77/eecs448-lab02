@@ -39,10 +39,20 @@ bool LinkedList<T>::search(T value) const
 {
 	Node<T>* temp = m_front;
 	bool isFound = false;
+	int count = 0; // initialize counter for while loop
 
-	/** TODO 
-		Fix this method
-	*/
+	if(m_size != 0)
+	{
+		while (isFound == false && count < m_size)
+		{
+			if (temp->getValue == value)
+			{
+				isFound = true;
+			}
+			temp = temp->getNext;
+			count ++;
+		}
+	}
 
 	return(isFound);
 }
